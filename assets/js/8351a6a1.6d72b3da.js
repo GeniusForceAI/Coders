@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkshippi=self.webpackChunkshippi||[]).push([[6041],{3922:(s,e,i)=>{i.r(e),i.d(e,{default:()=>t});i(6540);var p=i(6347),r=i(4848);function t(){return(0,r.jsx)(p.rd,{to:"/docs/intro"})}}}]);
