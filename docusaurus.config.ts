@@ -86,22 +86,27 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
+    image: 'img/social-card.png',
     metadata: [
       // Twitter Card
       {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: 'Genius Force'},
-      {name: 'twitter:description', content: 'AI-Powered Development Tools'},
-      {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/default-preview.png'},
-      
+      {name: 'twitter:title', content: 'Genius Force - AI Development Tools'},
+      {name: 'twitter:description', content: 'Build revenue-generating AI tools in 24 hours'},
+      {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.png'},
+
       // Open Graph (Facebook, iMessage, etc)
       {property: 'og:type', content: 'website'},
+      {property: 'og:title', content: 'Genius Force - AI Development Tools'},
+      {property: 'og:description', content: 'Build revenue-generating AI tools in 24 hours'},
+      {property: 'og:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.png'},
+      {property: 'og:image:alt', content: 'Genius Force Preview'},
       {property: 'og:url', content: 'https://geniusforceai.github.io/Coders/'},
-      {property: 'og:title', content: 'Genius Force'},
-      {property: 'og:description', content: 'AI-Powered Development Tools'},
-      {property: 'og:image', content: 'https://geniusforceai.github.io/Coders/img/default-preview.png'},
       {property: 'og:site_name', content: 'Genius Force'},
+
+      // Apple-specific
+      {name: 'apple-mobile-web-app-title', content: 'Genius Force'},
+      {name: 'apple-mobile-web-app-capable', content: 'yes'},
     ],
-    image: 'img/default-preview.png',
     navbar: {
       title: 'Genius Force',
       logo: {
