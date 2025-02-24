@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Genius Force - AI-Powered Development Tools',
-  tagline: 'Engineering Education, Reimagined',
+  title: 'Genius Force',
+  tagline: 'AI-Powered Development Tools',
   favicon: 'img/genius_force_atom_black_circle.svg',
 
   // Set the production url of your site here
@@ -88,26 +88,22 @@ const config: Config = {
     },
     metadata: [
       {name: 'keywords', content: 'AI, development, tools, education, engineering'},
-      {name: 'description', content: 'Building revenue-generating AI tools. From concept to profitable product in 24 hours.'},
+      {name: 'description', content: 'AI-Powered Development Tools'},
       
       // Twitter Card
       {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: 'Genius Force - AI-Powered Development Tools'},
-      {name: 'twitter:description', content: 'Building revenue-generating AI tools. From concept to profitable product in 24 hours.'},
+      {name: 'twitter:title', content: 'Genius Force'},
+      {name: 'twitter:description', content: 'AI-Powered Development Tools'},
       {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/default-preview.png'},
       
       // Open Graph (Facebook, iMessage, etc)
       {property: 'og:type', content: 'website'},
-      {property: 'og:title', content: 'Genius Force - AI-Powered Development Tools'},
-      {property: 'og:description', content: 'Building revenue-generating AI tools. From concept to profitable product in 24 hours.'},
+      {property: 'og:title', content: 'Genius Force'},
+      {property: 'og:description', content: 'AI-Powered Development Tools'},
       {property: 'og:image', content: 'https://geniusforceai.github.io/Coders/img/default-preview.png'},
-      {property: 'og:image:alt', content: 'Genius Force Logo'},
+      {property: 'og:image:alt', content: 'Genius Force Preview'},
       {property: 'og:url', content: 'https://geniusforceai.github.io/Coders/'},
       {property: 'og:site_name', content: 'Genius Force'},
-      
-      // Apple-specific
-      {name: 'apple-mobile-web-app-title', content: 'Genius Force'},
-      {name: 'apple-mobile-web-app-capable', content: 'yes'},
     ],
     image: 'img/default-preview.png',
     navbar: {

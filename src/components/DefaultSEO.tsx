@@ -9,13 +9,13 @@ interface DefaultSEOProps {
 }
 
 export default function DefaultSEO({ 
-  title = 'Genius Force - AI-Powered Development Tools',
-  description = 'Building revenue-generating AI tools. From concept to profitable product in 24 hours.',
-  image
+  title = 'Genius Force',
+  description = 'AI-Powered Development Tools',
+  image = '/img/default-preview.png'
 }: DefaultSEOProps): JSX.Element {
-  const defaultImage = useBaseUrl('/img/default-preview.png');
-  const previewImage = image ? useBaseUrl(image) : defaultImage;
   const siteUrl = 'https://geniusforceai.github.io/Coders';
+  const previewImage = useBaseUrl(image);
+  const fullImageUrl = `${siteUrl}${previewImage}`;
 
   return (
     <Head>
@@ -29,7 +29,7 @@ export default function DefaultSEO({
       <meta property="og:url" content={siteUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`${siteUrl}${previewImage}`} />
+      <meta property="og:image" content={fullImageUrl} />
       <meta property="og:site_name" content="Genius Force" />
 
       {/* Twitter */}
@@ -37,12 +37,7 @@ export default function DefaultSEO({
       <meta name="twitter:url" content={siteUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteUrl}${previewImage}`} />
-
-      {/* Apple */}
-      <meta name="apple-mobile-web-app-title" content="Genius Force" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <link rel="apple-touch-icon" href={`${siteUrl}/img/genius_force_atom_black_circle.svg`} />
+      <meta name="twitter:image" content={fullImageUrl} />
     </Head>
   );
 }
