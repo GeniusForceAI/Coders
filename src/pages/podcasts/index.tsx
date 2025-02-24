@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import PodcastSEO from '@site/src/components/PodcastSEO';
-import { episodes } from '@site/src/data/podcasts';
+import SearchBar from '@site/src/components/SearchBar';
 import styles from './podcast.module.css';
 
 const episodesData = [
@@ -41,40 +41,51 @@ const episodesData = [
 ];
 
 export default function Podcasts(): JSX.Element {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredEpisodes = episodesData.filter(episode => {
+    const searchContent = `${episode.title} ${episode.description}`.toLowerCase();
+    return searchContent.includes(searchQuery.toLowerCase());
+  });
+
   return (
     <>
       <PodcastSEO 
         title="GForce Podcasts - AI and Development Insights"
         description="Listen to our podcast series about AI, development, and project management. Get insights and discussions about the latest trends in software development."
       />
-      <Layout
-        title="Podcasts"
-        description="Listen to our podcasts about AI, development, and project management">
-        <main className={styles.podcastsContainer}>
-          <div className={styles.podcastsHero}>
+      <Layout title="Podcasts">
+        <div className={styles.podcastsContainer}>
+          <div className={styles.podcastsHeader}>
             <h1>Podcasts</h1>
             <p>Insights and discussions about AI in development and project management</p>
+            <SearchBar
+              onSearch={setSearchQuery}
+              placeholder="Search episodes..."
+            />
           </div>
-          
-          <div className={styles.podcastsGrid}>
-            {episodesData.map((episode, idx) => (
-              <div key={idx} className={styles.podcastCard}>
-                <div className={styles.podcastContent}>
-                  <h3>{episode.title}</h3>
-                  <p>{episode.description}</p>
-                  <div className={styles.podcastMeta}>
+
+          <div className={styles.episodesGrid}>
+            {filteredEpisodes.map(episode => (
+              <Link
+                key={episode.slug}
+                to={`/podcasts/${episode.slug}`}
+                className={styles.episodeCard}
+              >
+                <div className={styles.episodeIcon}>{episode.icon}</div>
+                <div className={styles.episodeContent}>
+                  <h2 className={styles.episodeTitle}>{episode.title}</h2>
+                  <p className={styles.episodeDescription}>{episode.description}</p>
+                  <div className={styles.episodeMeta}>
                     <span>{episode.date}</span>
                     <span>•</span>
                     <span>{episode.duration}</span>
                   </div>
-                  <Link to={`/Coders/podcasts/${episode.slug}`} className={styles.listenButton}>
-                    Listen Now
-                  </Link>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
-        </main>
+        </div>
       </Layout>
     </>
   );

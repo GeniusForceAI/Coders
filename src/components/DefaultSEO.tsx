@@ -30,9 +30,6 @@ export default function DefaultSEO({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImageUrl} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Genius Force Preview" />
       <meta property="og:site_name" content="Genius Force" />
 
       {/* Twitter */}
@@ -41,7 +38,6 @@ export default function DefaultSEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImageUrl} />
-      <meta name="twitter:image:alt" content="Genius Force Preview" />
     </Head>
   );
 }
