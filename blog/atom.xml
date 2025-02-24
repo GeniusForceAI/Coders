@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://geniusforceai.github.io/Coders/blog/</id>
-    <title>Genius Force Blog</title>
+    <title>Genius Force - AI-Powered Development Tools Blog</title>
     <updated>2024-03-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://geniusforceai.github.io/Coders/blog/"/>
-    <subtitle>Genius Force Blog</subtitle>
+    <subtitle>Genius Force - AI-Powered Development Tools Blog</subtitle>
     <icon>https://geniusforceai.github.io/Coders/img/genius_force_atom_black_circle.svg</icon>
     <entry>
         <title type="html"><![CDATA[Test Post]]></title>
