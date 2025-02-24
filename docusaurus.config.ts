@@ -10,16 +10,16 @@ const config: Config = {
   favicon: 'img/genius_force_atom_black_circle.svg',
 
   // Set the production url of your site here
-  url: 'https://geniusforce.ai',
+  url: 'https://geniusforceai.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Shippe-Coder/',
+  baseUrl: '/Coders/',
   trailingSlash: true,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'AutoNateAI',
-  projectName: 'Shippe-Coder',
+  organizationName: 'GeniusForceAI',
+  projectName: 'Coders',
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'warn',
