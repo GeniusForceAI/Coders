@@ -92,7 +92,6 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    image: 'img/social-card.png',
     metadata: [
       // Twitter Card
       {name: 'twitter:card', content: 'summary_large_image'},
@@ -108,11 +107,8 @@ const config: Config = {
       {property: 'og:image:alt', content: 'Genius Force Preview'},
       {property: 'og:url', content: 'https://geniusforceai.github.io/Coders/'},
       {property: 'og:site_name', content: 'Genius Force'},
-
-      // Apple-specific
-      {name: 'apple-mobile-web-app-title', content: 'Genius Force'},
-      {name: 'apple-mobile-web-app-capable', content: 'yes'},
     ],
+    image: 'img/social-card.png',
     navbar: {
       title: 'Genius Force',
       logo: {

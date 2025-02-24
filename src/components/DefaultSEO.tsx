@@ -38,10 +38,6 @@ export default function DefaultSEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImageUrl} />
-
-      {/* Apple */}
-      <meta name="apple-mobile-web-app-title" content="Genius Force" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
     </Head>
   );
 }
