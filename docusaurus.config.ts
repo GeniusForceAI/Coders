@@ -95,12 +95,15 @@ const config: Config = {
       {name: 'twitter:title', content: 'Genius Force'},
       {name: 'twitter:description', content: 'AI-Powered Development Tools'},
       {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/default-preview.png'},
+      {name: 'twitter:image:alt', content: 'Genius Force Preview'},
       
       // Open Graph (Facebook, iMessage, etc)
       {property: 'og:type', content: 'website'},
       {property: 'og:title', content: 'Genius Force'},
       {property: 'og:description', content: 'AI-Powered Development Tools'},
       {property: 'og:image', content: 'https://geniusforceai.github.io/Coders/img/default-preview.png'},
+      {property: 'og:image:width', content: '1200'},
+      {property: 'og:image:height', content: '630'},
       {property: 'og:image:alt', content: 'Genius Force Preview'},
       {property: 'og:url', content: 'https://geniusforceai.github.io/Coders/'},
       {property: 'og:site_name', content: 'Genius Force'},
