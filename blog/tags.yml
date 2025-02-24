@@ -17,3 +17,23 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+ai:
+  label: AI
+  permalink: /ai
+  description: Articles about artificial intelligence and machine learning
+
+code-review:
+  label: Code Review
+  permalink: /code-review
+  description: Articles about code review practices and tools
+
+podcast:
+  label: Podcast
+  permalink: /podcast
+  description: Podcast episodes and related content
+
+test:
+  label: Test
+  permalink: /test
+  description: Test articles and content

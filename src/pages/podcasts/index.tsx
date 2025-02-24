@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import PodcastSEO from '@site/src/components/PodcastSEO';
-import { episodes } from './data';
+import { episodes } from '@site/src/data/podcasts';
 import styles from './podcast.module.css';
 
 const episodesData = [

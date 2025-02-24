@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import YouTubeVideo from '@site/src/components/YouTubeVideo';
 import PodcastSEO from '@site/src/components/PodcastSEO';
-import { episodes } from './data';
+import { episodes } from '@site/src/data/podcasts';
 import styles from './podcast.module.css';
 
 export default function AiProjectManagement(): JSX.Element {
