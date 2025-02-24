@@ -11,7 +11,7 @@ interface DefaultSEOProps {
 export default function DefaultSEO({ 
   title = 'Genius Force - AI Development Tools',
   description = 'Build revenue-generating AI tools in 24 hours',
-  image = '/img/social-card.jpg'
+  image = '/img/social-card.png'
 }: DefaultSEOProps): JSX.Element {
   const siteUrl = 'https://geniusforceai.github.io/Coders';
   const previewImage = useBaseUrl(image);
