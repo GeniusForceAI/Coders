@@ -187,21 +187,19 @@ function FloatingCTA() {
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <>
+    <Layout
+      title="Home"
+      description="Build revenue-generating AI tools in 24 hours">
       <DefaultSEO 
-        title="Genius Force - AI-Powered Development Tools"
-        description="Building revenue-generating AI tools. From concept to profitable product in 24 hours."
-        image="/img/podcast-preview.png"
+        title="Genius Force - AI Development Tools"
+        description="Build revenue-generating AI tools in 24 hours"
+        image="/img/social-card.jpg"
       />
-      <Layout
-        title={siteConfig.title}
-        description="Build revenue-generating AI tools in 24 hours">
-        <HomepageHeader />
-        <main>
-          <MainContent />
-          <FloatingCTA />
-        </main>
-      </Layout>
-    </>
+      <HomepageHeader />
+      <main>
+        <MainContent />
+        <FloatingCTA />
+      </main>
+    </Layout>
   );
 }

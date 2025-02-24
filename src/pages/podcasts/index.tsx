@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import PodcastSEO from '@site/src/components/PodcastSEO';
+import DefaultSEO from '@docusaurus/Head';
 import SearchBar from '@site/src/components/SearchBar';
 import styles from './podcast.module.css';
 
@@ -40,7 +40,7 @@ const episodesData = [
   },
 ];
 
-export default function Podcasts(): JSX.Element {
+export default function PodcastsPage(): JSX.Element {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredEpisodes = episodesData.filter(episode => {
@@ -49,44 +49,46 @@ export default function Podcasts(): JSX.Element {
   });
 
   return (
-    <>
-      <PodcastSEO 
-        title="GForce Podcasts - AI and Development Insights"
-        description="Listen to our podcast series about AI, development, and project management. Get insights and discussions about the latest trends in software development."
+    <Layout
+      title="Podcasts"
+      description="Listen to our latest podcasts about AI development and tools"
+    >
+      <DefaultSEO 
+        title="Genius Force Podcasts - AI Development Insights"
+        description="Listen to our latest podcasts about AI development and tools"
+        image="/img/social-card.jpg"
       />
-      <Layout title="Podcasts">
-        <div className={styles.podcastsContainer}>
-          <div className={styles.podcastsHeader}>
-            <h1>Podcasts</h1>
-            <p>Insights and discussions about AI in development and project management</p>
-            <SearchBar
-              onSearch={setSearchQuery}
-              placeholder="Search episodes..."
-            />
-          </div>
-
-          <div className={styles.episodesGrid}>
-            {filteredEpisodes.map(episode => (
-              <Link
-                key={episode.slug}
-                to={`/podcasts/${episode.slug}`}
-                className={styles.episodeCard}
-              >
-                <div className={styles.episodeIcon}>{episode.icon}</div>
-                <div className={styles.episodeContent}>
-                  <h2 className={styles.episodeTitle}>{episode.title}</h2>
-                  <p className={styles.episodeDescription}>{episode.description}</p>
-                  <div className={styles.episodeMeta}>
-                    <span>{episode.date}</span>
-                    <span>•</span>
-                    <span>{episode.duration}</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+      <div className={styles.podcastsContainer}>
+        <div className={styles.podcastsHeader}>
+          <h1>Podcasts</h1>
+          <p>Insights and discussions about AI in development and project management</p>
+          <SearchBar
+            onSearch={setSearchQuery}
+            placeholder="Search episodes..."
+          />
         </div>
-      </Layout>
-    </>
+
+        <div className={styles.episodesGrid}>
+          {filteredEpisodes.map(episode => (
+            <Link
+              key={episode.slug}
+              to={`/podcasts/${episode.slug}`}
+              className={styles.episodeCard}
+            >
+              <div className={styles.episodeIcon}>{episode.icon}</div>
+              <div className={styles.episodeContent}>
+                <h2 className={styles.episodeTitle}>{episode.title}</h2>
+                <p className={styles.episodeDescription}>{episode.description}</p>
+                <div className={styles.episodeMeta}>
+                  <span>{episode.date}</span>
+                  <span>•</span>
+                  <span>{episode.duration}</span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </Layout>
   );
 }
