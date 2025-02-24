@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Genius Force',
+  title: 'Genius Force - AI-Powered Development Tools',
   tagline: 'Engineering Education, Reimagined',
   favicon: 'img/genius_force_atom_black_circle.svg',
 
@@ -86,7 +86,30 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    image: 'img/social-card.png',
+    metadata: [
+      {name: 'keywords', content: 'AI, development, tools, education, engineering'},
+      {name: 'description', content: 'Building revenue-generating AI tools. From concept to profitable product in 24 hours.'},
+      
+      // Twitter Card
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: 'Genius Force - AI-Powered Development Tools'},
+      {name: 'twitter:description', content: 'Building revenue-generating AI tools. From concept to profitable product in 24 hours.'},
+      {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/default-preview.png'},
+      
+      // Open Graph (Facebook, iMessage, etc)
+      {property: 'og:type', content: 'website'},
+      {property: 'og:title', content: 'Genius Force - AI-Powered Development Tools'},
+      {property: 'og:description', content: 'Building revenue-generating AI tools. From concept to profitable product in 24 hours.'},
+      {property: 'og:image', content: 'https://geniusforceai.github.io/Coders/img/default-preview.png'},
+      {property: 'og:image:alt', content: 'Genius Force Logo'},
+      {property: 'og:url', content: 'https://geniusforceai.github.io/Coders/'},
+      {property: 'og:site_name', content: 'Genius Force'},
+      
+      // Apple-specific
+      {name: 'apple-mobile-web-app-title', content: 'Genius Force'},
+      {name: 'apple-mobile-web-app-capable', content: 'yes'},
+    ],
+    image: 'img/default-preview.png',
     navbar: {
       title: 'Genius Force',
       logo: {
@@ -188,26 +211,6 @@ const config: Config = {
         },
       ],
     },
-    metadata: [
-      // Twitter Card
-      {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: 'Shippi - AI Dev Docs'},
-      {name: 'twitter:description', content: 'Ship Better Code, Faster'},
-      {name: 'twitter:image', content: 'https://autonateai.github.io/Shippe-Coder/img/social-card.png'},
-      
-      // Open Graph (Facebook, iMessage, etc)
-      {property: 'og:type', content: 'website'},
-      {property: 'og:title', content: 'Shippi - AI Dev Docs'},
-      {property: 'og:description', content: 'Ship Better Code, Faster'},
-      {property: 'og:image', content: 'https://autonateai.github.io/Shippe-Coder/img/social-card.png'},
-      {property: 'og:image:alt', content: 'Shippi Logo'},
-      {property: 'og:url', content: 'https://autonateai.github.io/Shippe-Coder/'},
-      {property: 'og:site_name', content: 'Shippi'},
-      
-      // Apple-specific
-      {name: 'apple-mobile-web-app-title', content: 'Shippi'},
-      {name: 'apple-mobile-web-app-capable', content: 'yes'},
-    ],
     customCss: [
       './src/css/custom.css',
     ],
