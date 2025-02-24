@@ -5,7 +5,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import { PlayIcon, BookIcon, ChromeIcon, VSCodeIcon } from '@site/src/components/Icons';
-import DefaultSEO from '@site/src/components/DefaultSEO';
 
 import styles from './index.module.css';
 
@@ -188,13 +187,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="Home"
-      description="Build revenue-generating AI tools in 24 hours">
-      <DefaultSEO 
-        title="Genius Force - AI Development Tools"
-        description="Build revenue-generating AI tools in 24 hours"
-        image="/img/social-card.jpg"
-      />
+      title={siteConfig.title}
+      description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
         <MainContent />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import DefaultSEO from '@docusaurus/Head';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import SearchBar from '@site/src/components/SearchBar';
 import styles from './podcast.module.css';
 
@@ -41,6 +41,7 @@ const episodesData = [
 ];
 
 export default function PodcastsPage(): JSX.Element {
+  const { siteConfig } = useDocusaurusContext();
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredEpisodes = episodesData.filter(episode => {
@@ -51,13 +52,8 @@ export default function PodcastsPage(): JSX.Element {
   return (
     <Layout
       title="Podcasts"
-      description="Listen to our latest podcasts about AI development and tools"
+      description="Listen to our podcasts about AI development"
     >
-      <DefaultSEO 
-        title="Genius Force Podcasts - AI Development Insights"
-        description="Listen to our latest podcasts about AI development and tools"
-        image="/img/social-card.jpg"
-      />
       <div className={styles.podcastsContainer}>
         <div className={styles.podcastsHeader}>
           <h1>Podcasts</h1>

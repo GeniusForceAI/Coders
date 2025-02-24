@@ -93,28 +93,29 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     metadata: [
-      // Twitter Card
-      {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: 'Genius Force - AI Dev Docs'},
-      {name: 'twitter:description', content: 'Build revenue-generating AI tools in 24 hours'},
-      {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.png'},
-
-      // Open Graph (Facebook, iMessage, etc)
+      // Primary Meta Tags
+      {name: 'title', content: 'Genius Force - AI Development Tools'},
+      {name: 'description', content: 'Build revenue-generating AI tools in 24 hours'},
+      
+      // Open Graph / Facebook
       {property: 'og:type', content: 'website'},
-      {property: 'og:site_name', content: 'Genius Force'},
-      {property: 'og:title', content: 'Genius Force - AI Dev Docs'},
+      {property: 'og:url', content: 'https://geniusforceai.github.io/Coders'},
+      {property: 'og:title', content: 'Genius Force - AI Development Tools'},
       {property: 'og:description', content: 'Build revenue-generating AI tools in 24 hours'},
       {property: 'og:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.png'},
-      {property: 'og:image:alt', content: 'Genius Force Logo'},
-      {property: 'og:url', content: 'https://geniusforceai.github.io/Coders/'},
-      {property: 'og:image:width', content: '1200'},
-      {property: 'og:image:height', content: '630'},
-
-      // Apple-specific
-      {name: 'apple-mobile-web-app-title', content: 'Genius Force'},
-      {name: 'apple-mobile-web-app-capable', content: 'yes'},
+      {property: 'og:site_name', content: 'Genius Force'},
+      
+      // Twitter Card
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:url', content: 'https://geniusforceai.github.io/Coders'},
+      {name: 'twitter:title', content: 'Genius Force - AI Development Tools'},
+      {name: 'twitter:description', content: 'Build revenue-generating AI tools in 24 hours'},
+      {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.png'},
+      
+      // Additional Meta Tags
       {name: 'theme-color', content: '#00F5FF'},
-      {name: 'msapplication-TileColor', content: '#00F5FF'},
+      {name: 'apple-mobile-web-app-capable', content: 'yes'},
+      {name: 'apple-mobile-web-app-title', content: 'Genius Force'},
     ],
     image: 'img/social-card.png',
     navbar: {
