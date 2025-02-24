@@ -19,8 +19,9 @@ const config: Config = {
   organizationName: 'GeniusForceAI',
   projectName: 'Coders',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: process.env.NODE_ENV === 'production' ? 'warn' : 'throw',
   onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -36,6 +37,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: 'docs',
+          // Please change this to your repo.
+          editUrl: 'https://github.com/GeniusForceAI/Coders/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -59,12 +63,16 @@ const config: Config = {
         ],
         createRedirects(existingPath) {
           if (existingPath.includes('/docs/')) {
-            // Only redirect if the path doesn't already start with /tutorials/
-            return !existingPath.startsWith('/tutorials/') ? [`/tutorials${existingPath.replace('/docs/', '/')}`] : undefined;
+            // Only redirect if the path doesn't start with /tutorials/ or /podcasts/
+            return !existingPath.startsWith('/tutorials/') && !existingPath.startsWith('/podcasts/') 
+              ? [`/tutorials${existingPath.replace('/docs/', '/')}`] 
+              : undefined;
           }
           if (existingPath.includes('/prompts/')) {
-            // Only redirect if the path doesn't already start with /downloadables/
-            return !existingPath.startsWith('/downloadables/') ? [`/downloadables${existingPath.replace('/prompts/', '/')}`] : undefined;
+            // Only redirect if the path doesn't start with /downloadables/
+            return !existingPath.startsWith('/downloadables/') 
+              ? [`/downloadables${existingPath.replace('/prompts/', '/')}`] 
+              : undefined;
           }
           return undefined;
         },

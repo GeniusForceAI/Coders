@@ -60,6 +60,19 @@ export default function AgileDevlopment2024(): JSX.Element {
                   ))}
                 </ul>
               </div>
+
+              <div className={styles.episodeContent}>
+                <p>{episode.description}</p>
+                <h2>Related Documentation</h2>
+                <ul>
+                  <li>
+                    <Link to="/docs/development-lifecycle">Development Lifecycle</Link>
+                  </li>
+                  <li>
+                    <Link to="/docs/ai-patterns">AI Patterns</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </article>
         </main>
