@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshippi=self.webpackChunkshippi||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/Coders/blog","blogTitle":"Blog","authorsListPath":"/Coders/blog/authors"}')}}]);

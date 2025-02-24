@@ -1,0 +1,39 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="1200" height="630" fill="url(#gradient)"/>
+  
+  <!-- Main content group -->
+  <g filter="url(#shadow)">
+    <!-- Logo/Icon -->
+    <path d="M300 265 L360 205 L420 265 L360 325 Z" fill="#00F5FF"/>
+    
+    <!-- Ship icon -->
+    <path d="M380 245 L440 245 L410 285 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- Text elements -->
+  <text x="480" y="280" fill="white" font-family="Inter, system-ui, sans-serif" font-size="72" font-weight="bold">
+    Shippi
+  </text>
+  
+  <text x="480" y="350" fill="#00F5FF" font-family="Inter, system-ui, sans-serif" font-size="32">
+    Ship Better Code, Faster
+  </text>
+
+  <!-- Decorative elements -->
+  <path d="M50 530 L1150 530" stroke="#00F5FF" stroke-width="2" stroke-opacity="0.1"/>
+  
+  <!-- Definitions -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-10" y="-10" width="1220" height="650" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+</svg> 

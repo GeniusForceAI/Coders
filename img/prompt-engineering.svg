@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="160" viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .prompt { animation: type 3s linear infinite; }
+    .cursor { animation: blink 1s linear infinite; }
+    .thought { animation: fade 3s linear infinite; }
+    @keyframes type {
+      0% { stroke-dashoffset: 100; }
+      50% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    @keyframes fade {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+  </style>
+  <!-- Thought bubbles -->
+  <circle class="thought" cx="60" cy="80" r="10" fill="#00ffff" opacity="0.3"/>
+  <circle class="thought" cx="90" cy="60" r="15" fill="#00ffff" opacity="0.5"/>
+  <circle class="thought" cx="120" cy="40" r="20" fill="#00ffff" opacity="0.7"/>
+  
+  <!-- Prompt line -->
+  <path class="prompt" 
+        d="M40 120 L200 120" 
+        stroke="#00ffff" 
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-dasharray="100"
+        stroke-dashoffset="100"/>
+  
+  <!-- Cursor -->
+  <rect class="cursor" x="190" y="110" width="4" height="20" fill="#00ffff"/>
+</svg>

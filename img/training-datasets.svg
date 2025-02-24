@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="160" viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .data-point { animation: pulse 2s infinite; }
+    .connection { animation: draw 3s infinite; }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+    @keyframes draw {
+      0% { stroke-dashoffset: 100; }
+      50% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 0; }
+    }
+  </style>
+  
+  <!-- Data points -->
+  <circle class="data-point" cx="60" cy="60" r="8" fill="#00ffff" style="animation-delay: 0s"/>
+  <circle class="data-point" cx="180" cy="60" r="8" fill="#00ffff" style="animation-delay: 0.2s"/>
+  <circle class="data-point" cx="60" cy="100" r="8" fill="#00ffff" style="animation-delay: 0.4s"/>
+  <circle class="data-point" cx="180" cy="100" r="8" fill="#00ffff" style="animation-delay: 0.6s"/>
+  
+  <!-- Connections -->
+  <path class="connection" 
+        d="M60 60 L180 60 M60 100 L180 100 M60 60 L60 100 M180 60 L180 100" 
+        stroke="#00ffff" 
+        stroke-width="2"
+        stroke-dasharray="100"
+        stroke-dashoffset="100"
+        opacity="0.5"/>
+</svg>
