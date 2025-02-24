@@ -53,18 +53,6 @@ const config: Config = {
       {
         redirects: [
           {
-            from: '/downloadables',
-            to: '/downloadables',
-          },
-          {
-            from: '/courses',
-            to: '/courses',
-          },
-          {
-            from: '/podcasts',
-            to: '/podcasts',
-          },
-          {
             from: '/docs',
             to: '/docs/intro',
           },
@@ -72,11 +60,11 @@ const config: Config = {
         createRedirects(existingPath) {
           if (existingPath.includes('/docs/')) {
             // Only redirect if the path doesn't already start with /tutorials/
-            return !existingPath.startsWith('/tutorials/') ? [existingPath.replace('/docs/', '/tutorials/')] : undefined;
+            return !existingPath.startsWith('/tutorials/') ? [`/tutorials${existingPath.replace('/docs/', '/')}`] : undefined;
           }
           if (existingPath.includes('/prompts/')) {
             // Only redirect if the path doesn't already start with /downloadables/
-            return !existingPath.startsWith('/downloadables/') ? [existingPath.replace('/prompts/', '/downloadables/')] : undefined;
+            return !existingPath.startsWith('/downloadables/') ? [`/downloadables${existingPath.replace('/prompts/', '/')}`] : undefined;
           }
           return undefined;
         },
