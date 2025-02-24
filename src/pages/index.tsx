@@ -188,7 +188,11 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <>
-      <DefaultSEO />
+      <DefaultSEO 
+        title="Genius Force - AI-Powered Development Tools"
+        description="Building revenue-generating AI tools. From concept to profitable product in 24 hours."
+        image="/img/podcast-preview.png"
+      />
       <Layout
         title={siteConfig.title}
         description="Build revenue-generating AI tools in 24 hours">
