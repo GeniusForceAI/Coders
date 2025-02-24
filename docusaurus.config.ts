@@ -95,18 +95,20 @@ const config: Config = {
     metadata: [
       // Twitter Card
       {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: 'Genius Force - AI Development Tools'},
+      {name: 'twitter:title', content: 'Genius Force'},
       {name: 'twitter:description', content: 'Build revenue-generating AI tools in 24 hours'},
       {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.jpg'},
 
       // Open Graph (Facebook, iMessage, etc)
       {property: 'og:type', content: 'website'},
-      {property: 'og:title', content: 'Genius Force - AI Development Tools'},
+      {property: 'og:title', content: 'Genius Force'},
       {property: 'og:description', content: 'Build revenue-generating AI tools in 24 hours'},
       {property: 'og:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.jpg'},
       {property: 'og:image:alt', content: 'Genius Force Preview'},
       {property: 'og:url', content: 'https://geniusforceai.github.io/Coders/'},
       {property: 'og:site_name', content: 'Genius Force'},
+      {property: 'og:image:width', content: '1200'},
+      {property: 'og:image:height', content: '630'},
 
       // iOS specific
       {name: 'apple-mobile-web-app-title', content: 'Genius Force'},
