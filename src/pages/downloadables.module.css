@@ -1,30 +1,39 @@
 .hero {
-  background: linear-gradient(135deg, #00ffff 0%, #7000ff 100%);
-  padding: 4rem 2rem;
+  background: radial-gradient(circle at top right, #1b1b1b 0%, #2b213a 50%, #1b1b1b 100%);
+  padding: 6rem 2rem;
   text-align: center;
-  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
 }
 
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
 }
 
 .hero p {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 4rem 2rem;
-  background: #1b1b1b;
+  background: var(--ifm-background-color);
 }
 
 .resourceCategories {
@@ -35,28 +44,31 @@
 .resourceCategories h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #00ffff;
+  color: var(--ifm-color-primary);
 }
 
 .resourceCategories p {
   font-size: 1.2rem;
-  color: #999;
+  color: var(--ifm-color-emphasis-700);
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .card {
-  background: #2d2d2d;
+  background: var(--ifm-card-background-color);
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
-  border: 1px solid #333;
+  border: 1px solid var(--ifm-color-emphasis-200);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -64,7 +76,8 @@
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary);
 }
 
 .cardContent {
@@ -74,25 +87,33 @@
   height: 100%;
 }
 
+.cardIcon {
+  width: 240px;
+  height: 160px;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
 .category {
   display: inline-block;
-  background: rgba(0, 255, 255, 0.1);
-  color: #00ffff;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-contrast-background);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.875rem;
   margin-bottom: 1rem;
+  opacity: 0.9;
 }
 
 .title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--ifm-heading-color);
   line-height: 1.3;
 }
 
 .description {
-  color: #999;
+  color: var(--ifm-color-emphasis-700);
   margin-bottom: 0;
   line-height: 1.6;
   flex-grow: 1;
@@ -108,8 +129,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  background: #00ffff;
-  color: #000;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-contrast-background);
   border: none;
   padding: 0.75rem;
   border-radius: 8px;
@@ -121,13 +142,74 @@
 }
 
 .downloadButton:hover {
-  background: #00cccc;
+  background: var(--ifm-color-primary-darker);
   transform: translateY(-2px);
 }
 
 .downloadIcon {
   width: 20px;
   height: 20px;
+}
+
+.searchContainer {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  gap: 1rem;
+}
+
+.searchBox:focus-within {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.1);
+}
+
+.searchIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--ifm-color-emphasis-500);
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: var(--ifm-font-color-base);
+  outline: none;
+  min-width: 0;
+}
+
+.searchInput::placeholder {
+  color: var(--ifm-color-emphasis-500);
+}
+
+.categorySelect {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.categorySelect:hover,
+.categorySelect:focus {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-200);
 }
 
 @media (max-width: 1200px) {
@@ -138,7 +220,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 3rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
   .hero h1 {

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="160" viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .code-line { animation: slide-in 3s linear infinite; }
+    .check { animation: check-mark 3s linear infinite; }
+    @keyframes slide-in {
+      0% { transform: translateX(-240px); opacity: 0; }
+      20% { transform: translateX(0); opacity: 1; }
+      80% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(240px); opacity: 0; }
+    }
+    @keyframes check-mark {
+      0%, 30% { stroke-dashoffset: 100; }
+      50%, 80% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 0; }
+    }
+  </style>
+  
+  <!-- Code lines -->
+  <g class="code-line" style="animation-delay: 0s">
+    <rect x="40" y="40" width="160" height="8" rx="4" fill="#00ffff" opacity="0.3"/>
+  </g>
+  <g class="code-line" style="animation-delay: 0.5s">
+    <rect x="40" y="60" width="120" height="8" rx="4" fill="#00ffff" opacity="0.3"/>
+  </g>
+  <g class="code-line" style="animation-delay: 1s">
+    <rect x="40" y="80" width="140" height="8" rx="4" fill="#00ffff" opacity="0.3"/>
+  </g>
+  
+  <!-- Check mark -->
+  <path class="check"
+        d="M180 100 L190 110 L210 90"
+        stroke="#00ffff"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-dasharray="100"
+        stroke-dashoffset="100"/>
+</svg>

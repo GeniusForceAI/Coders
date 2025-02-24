@@ -11,29 +11,30 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
         <div className={styles.heroContent}>
-          <div className={styles.heroText}>
-            <h1>Engineering Evolution Through AI</h1>
-            <p className="hero__subtitle">
-              Master AI-driven development through interactive tutorials, animated lessons, and hands-on revenue generation
-            </p>
-            <div className={styles.headerButtons}>
-              <Link
-                className="button button--primary"
-                to="docs/intro">
-                <PlayIcon /> Start Learning
+          <div>
+            <h1>Unleash Your<br/>Genius Force</h1>
+            <p>Build million-dollar AI apps in record time. Join the elite community of developers transforming ideas into profitable products.</p>
+            <div className={styles.heroButtons}>
+              <Link className={styles.primaryButton} to="/courses">
+                Watch Series
               </Link>
-              <Link
-                className="button button--secondary"
-                to="courses">
-                <BookIcon /> Browse Courses
+              <Link className={styles.secondaryButton} to="/tutorials">
+                Try Tutorials
               </Link>
             </div>
           </div>
-          <div className={styles.heroDesktopAnimation}>
-            <img src="img/hero-animation.svg" alt="AI Engineering Education" />
+          <div className={styles.heroVideo}>
+            <div className={styles.videoWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/to9iVovmBmo"
+                title="Introduction Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -85,17 +86,13 @@ function MainContent() {
           <div className={styles.ctaBannerButtons}>
             <a 
               href="#" 
-              className={styles.vscodeButton} 
-              target="_blank"
-              rel="noopener noreferrer"
+              className={styles.watchButton}
             >
               Watch Series
             </a>
             <a 
               href="#" 
-              className={styles.chromeButton}
-              target="_blank"
-              rel="noopener noreferrer"
+              className={styles.tutorialButton}
             >
               Try Tutorials
             </a>
@@ -176,13 +173,10 @@ function FloatingCTA() {
         <span>Transform your development workflow with AI</span>
         <div className={styles.floatingCTAButtons}>
           <a
-            className={styles.floatingVSCodeButton} 
+            className={styles.tryWindsurfButton} 
             href="#"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            <VSCodeIcon />
-            Try Windsurf Now
+            Try Windsurf
           </a>
         </div>
       </div>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="160" viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .gear { animation: rotate 10s linear infinite; }
+    .setting { animation: fade 2s infinite; }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes fade {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+  </style>
+  
+  <!-- Gears -->
+  <g class="gear" style="transform-origin: 90px 80px">
+    <circle cx="90" cy="80" r="30" stroke="#00ffff" stroke-width="4" fill="none"/>
+    <path d="M90 50 L90 40 M120 80 L130 80 M90 110 L90 120 M60 80 L50 80" 
+          stroke="#00ffff" stroke-width="4"/>
+  </g>
+  
+  <!-- Settings -->
+  <g class="setting" style="animation-delay: 0s">
+    <rect x="140" y="60" width="60" height="8" rx="4" fill="#00ffff"/>
+  </g>
+  <g class="setting" style="animation-delay: 0.5s">
+    <rect x="140" y="80" width="40" height="8" rx="4" fill="#00ffff"/>
+  </g>
+  <g class="setting" style="animation-delay: 1s">
+    <rect x="140" y="100" width="50" height="8" rx="4" fill="#00ffff"/>
+  </g>
+</svg>
