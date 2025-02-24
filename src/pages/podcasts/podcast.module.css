@@ -4,13 +4,21 @@
   margin: 0 auto;
 }
 
-.podcastHeader {
+.podcastsHeader {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 3rem 0;
-  background: var(--ifm-background-surface-color);
-  border-radius: 12px;
-  border: 1px solid var(--ifm-color-emphasis-200);
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.podcastsHeader h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.podcastsHeader p {
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
 }
 
 .podcastIcon {
@@ -18,12 +26,6 @@
   height: 120px;
   margin: 0 auto 2rem;
   color: var(--ifm-color-primary);
-}
-
-.podcastHeader h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--ifm-heading-color);
 }
 
 .podcastMeta {
@@ -81,4 +83,260 @@
   border-radius: 8px;
   padding: 1.5rem;
   margin-top: 1rem;
-} 
+}
+
+.episodeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.episodeCard {
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.episodeCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.episodeContent {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.episodeIcon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.stackIcon,
+.codeIcon,
+.devopsIcon,
+.agileIcon {
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stackIcon {
+  background-image: url('@site/static/img/stack-icon.svg');
+}
+
+.codeIcon {
+  background-image: url('@site/static/img/code-icon.svg');
+}
+
+.devopsIcon {
+  background-image: url('@site/static/img/devops-icon.svg');
+}
+
+.agileIcon {
+  background-image: url('@site/static/img/agile-icon.svg');
+}
+
+.episodeTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--ifm-heading-color);
+}
+
+.episodeMeta {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0 1rem;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}
+
+.episodeDescription {
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+  flex: 1;
+}
+
+/* Episode page styles */
+.episodeContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.episodeHeader {
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.episodeHeader h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.episodeContent {
+  background: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 2rem;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.episodeContent h2 {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.episodeTranscript {
+  margin: 2rem 0;
+}
+
+.transcriptText ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.transcriptText li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.transcriptText li:before {
+  content: "•";
+  color: var(--ifm-color-primary);
+  position: absolute;
+  left: 0;
+}
+
+.episodeResources {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.episodeResources ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.episodeResources li {
+  margin-bottom: 0.5rem;
+}
+
+.episodeResources a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.episodeResources a:hover {
+  text-decoration: underline;
+}
+
+.episodeNotFound {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.episodeNotFound h1 {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-danger);
+}
+
+.episodeNotFound p {
+  margin-bottom: 2rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgb(0, 236, 255) 0%, rgb(110, 110, 255) 50%, rgb(196, 110, 255) 100%);
+}
+
+.heroBanner h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.heroBanner p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+.card {
+  background: #1b1b1d;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 200, 200, 0.1);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 200, 200, 0.3);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardContent h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #00c8c8;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.cardContent a {
+  width: 100%;
+  margin-top: auto;
+}

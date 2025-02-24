@@ -1,0 +1,28 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background glow effect -->
+  <circle cx="16" cy="16" r="15" fill="url(#glow-dark)" filter="url(#blur)"/>
+  
+  <!-- Main ship shape -->
+  <path d="M16 4L28 28H4L16 4Z" fill="#FFFFFF" filter="url(#neon)"/>
+  
+  <!-- Circuit lines -->
+  <path d="M16 8L22 24H10L16 8Z" stroke="#00F5FF" stroke-width="0.5" stroke-opacity="0.8"/>
+  <path d="M16 12L19 20H13L16 12Z" stroke="#FF00F5" stroke-width="0.5" stroke-opacity="0.8"/>
+  
+  <!-- Definitions for effects -->
+  <defs>
+    <radialGradient id="glow-dark" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+    
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+</svg> 

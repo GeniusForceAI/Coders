@@ -6,8 +6,8 @@ import PodcastSEO from '@site/src/components/PodcastSEO';
 import { episodes } from './data';
 import styles from './podcast.module.css';
 
-export default function AiProjectManagement(): JSX.Element {
-  const episode = episodes['ai-project-management'];
+export default function AgileDevlopment2024(): JSX.Element {
+  const episode = episodes['agile-development-2024'];
 
   return (
     <>

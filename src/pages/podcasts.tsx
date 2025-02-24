@@ -19,7 +19,7 @@ const PODCASTS: Podcast[] = [
     date: "March 15, 2024",
     duration: "45 min",
     icon: <AIProjectManagementIcon />,
-    link: "/blog/ai-project-management"
+    link: "/Coders/podcasts/ai-project-management"
   },
   {
     title: "The Future of Code Review",
@@ -27,7 +27,7 @@ const PODCASTS: Podcast[] = [
     date: "March 8, 2024",
     duration: "38 min",
     icon: <CodeReviewIcon />,
-    link: "/blog/code-review"
+    link: "/Coders/podcasts/future-of-code-review"
   },
   {
     title: "DevOps Evolution",
@@ -35,7 +35,7 @@ const PODCASTS: Podcast[] = [
     date: "March 1, 2024",
     duration: "42 min",
     icon: <DevOpsIcon />,
-    link: "/blog/devops"
+    link: "/Coders/podcasts/devops-evolution"
   },
   {
     title: "Agile Development in 2024",
@@ -43,7 +43,7 @@ const PODCASTS: Podcast[] = [
     date: "February 23, 2024",
     duration: "40 min",
     icon: <AgileIcon />,
-    link: "/blog/agile"
+    link: "/Coders/podcasts/agile-development-2024"
   }
 ];
 
@@ -88,4 +88,4 @@ export default function Podcasts(): JSX.Element {
       </main>
     </Layout>
   );
-} 
+}

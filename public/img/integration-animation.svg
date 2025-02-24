@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Central Hub -->
+  <circle cx="200" cy="150" r="40" fill="#00c8c8" opacity="0.2">
+    <animate attributeName="r" values="40;45;40" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="150" r="35" fill="#00c8c8" opacity="0.3"/>
+  
+  <!-- Integration Points -->
+  <rect x="50" y="50" width="60" height="60" rx="10" fill="#00c8c8" opacity="0.4"/>
+  <rect x="290" y="50" width="60" height="60" rx="10" fill="#00c8c8" opacity="0.4"/>
+  <rect x="50" y="190" width="60" height="60" rx="10" fill="#00c8c8" opacity="0.4"/>
+  <rect x="290" y="190" width="60" height="60" rx="10" fill="#00c8c8" opacity="0.4"/>
+  
+  <!-- Connection Lines -->
+  <line x1="110" y1="80" x2="160" y2="150" stroke="#00c8c8" stroke-width="2">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="290" y1="80" x2="240" y2="150" stroke="#00c8c8" stroke-width="2">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+  </line>
+  <line x1="110" y1="220" x2="160" y2="150" stroke="#00c8c8" stroke-width="2">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" begin="1s"/>
+  </line>
+  <line x1="290" y1="220" x2="240" y2="150" stroke="#00c8c8" stroke-width="2">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+  </line>
+  
+  <!-- Data Flow Particles -->
+  <circle cx="135" cy="115" r="4" fill="#00c8c8">
+    <animate attributeName="cx" values="110;160" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="80;150" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="265" cy="115" r="4" fill="#00c8c8">
+    <animate attributeName="cx" values="290;240" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="80;150" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="135" cy="185" r="4" fill="#00c8c8">
+    <animate attributeName="cx" values="110;160" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="220;150" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="265" cy="185" r="4" fill="#00c8c8">
+    <animate attributeName="cx" values="290;240" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="220;150" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Pulse Effect -->
+  <circle cx="200" cy="150" r="20" fill="none" stroke="#00c8c8" stroke-width="2">
+    <animate attributeName="r" values="20;40;20" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

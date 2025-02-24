@@ -12,17 +12,14 @@ const config: Config = {
   // Set the production url of your site here
   url: 'https://geniusforceai.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/Coders/',
   trailingSlash: true,
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'GeniusForceAI',
   projectName: 'Coders',
-  deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -39,16 +36,14 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/AutoNateAI/Shippe-Coder/tree/main/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/AutoNateAI/Shippe-Coder/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
         },
-      } satisfies Preset.Options,
+      },
     ],
   ],
 
@@ -58,20 +53,20 @@ const config: Config = {
       {
         redirects: [
           {
-            from: '/tutorials',
-            to: '/docs/intro',
-          },
-          {
-            from: '/tutorials/:path*',
-            to: '/docs/:path*',
-          },
-          {
             from: '/downloadables',
-            to: '/prompts',
+            to: '/Coders/downloadables',
           },
           {
-            from: '/downloadables/:path*',
-            to: '/prompts/:path*',
+            from: '/courses',
+            to: '/Coders/courses',
+          },
+          {
+            from: '/podcasts',
+            to: '/Coders/podcasts',
+          },
+          {
+            from: '/docs',
+            to: '/Coders/docs/intro',
           },
         ],
         createRedirects(existingPath) {
@@ -106,10 +101,9 @@ const config: Config = {
       style: 'dark',
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
+          to: 'docs/intro',
           label: 'Tutorials',
+          position: 'left',
         },
         {
           to: 'courses',
@@ -157,17 +151,34 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Podcasts',
-              to: 'podcasts',
+              label: 'Discord',
+              href: 'https://discord.gg/geniusforce',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/geniusforceai',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/AutoNateAI/Shippe-Coder',
+              href: 'https://github.com/geniusforceai',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: 'blog',
+            },
+            {
+              label: 'Podcasts',
+              to: 'podcasts',
             },
           ],
         },
       ],
-      copyright: `Copyright ${new Date().getFullYear()} Genius Force. Built with Docusaurus.`,
+      copyright: `Copyright ${new Date().getFullYear()} Genius Force AI. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.dracula,
@@ -203,7 +214,7 @@ const config: Config = {
     customCss: [
       './src/css/custom.css',
     ],
-  } satisfies Preset.ThemeConfig,
+  },
 };
 
 export default config;

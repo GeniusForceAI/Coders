@@ -2,31 +2,32 @@ import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import { PlayIcon, BookIcon, ChromeIcon, VSCodeIcon } from '@site/src/components/Icons';
+import DefaultSEO from '@site/src/components/DefaultSEO';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
-            <h1>Engineering Education, Reimagined</h1>
+            <h1>Engineering Evolution Through AI</h1>
             <p className="hero__subtitle">
-              Learn engineering through AI-powered interactive tutorials and animated lessons.
+              Master AI-driven development through interactive tutorials, animated lessons, and hands-on revenue generation
             </p>
             <div className={styles.headerButtons}>
               <Link
                 className="button button--primary"
-                to="/docs/intro">
+                to="docs/intro">
                 <PlayIcon /> Start Learning
               </Link>
               <Link
                 className="button button--secondary"
-                to="/courses">
+                to="courses">
                 <BookIcon /> Browse Courses
               </Link>
             </div>
@@ -40,25 +41,14 @@ function HomepageHeader() {
   );
 }
 
-function FeatureCard({title, description, link, linkText, icon}: {
-  title: string;
-  description: string;
-  link: string;
-  linkText: string;
-  icon: React.ReactNode;
-}) {
+function Feature({title, description, icon: Icon}) {
   return (
-    <div className={styles.featureCard}>
-      <div className={styles.iconWrapper}>
-        {icon}
+    <div className={styles.feature}>
+      <div className={styles.featureIcon}>
+        <Icon />
       </div>
       <h3>{title}</h3>
       <p>{description}</p>
-      <Link
-        className="button button--secondary button--sm"
-        to={link}>
-        {linkText}
-      </Link>
     </div>
   );
 }
@@ -69,15 +59,15 @@ function MainContent() {
       <section className={styles.workflowSection}>
         <div className={styles.sectionContent}>
           <div className={styles.sectionText}>
-            <h2>Transform Your Engineering Journey</h2>
-            <p>Engineering education isn't just about theory. It's about solving real problems, understanding practical implementations, and building working solutions. GForce brings it all together:</p>
+            <h2>Transform Your Development Journey</h2>
+            <p>Experience the future of engineering education with Windsurf, our AI coding companion. We combine practical learning with revenue generation:</p>
             <ul>
-              <li>Real problems from top US university communities</li>
-              <li>Step-by-step solution walkthroughs with code</li>
-              <li>Practical implementations you can use today</li>
+              <li>Build real-world AI tools that generate revenue in 24 hours</li>
+              <li>Learn through animated series and interactive tutorials</li>
+              <li>Master AI-driven development and marketing strategies</li>
             </ul>
-            <Link className="button button--primary" to="/docs/workflow">
-              Learn About Our Process
+            <Link className="button button--primary" to="docs/workflow">
+              Explore Our Process
             </Link>
           </div>
           <div className={styles.sectionAnimation}>
@@ -89,8 +79,8 @@ function MainContent() {
       <section className={styles.ctaBanner}>
         <div className={styles.ctaBannerContent}>
           <div className={styles.ctaBannerText}>
-            <h2>Start Learning Today</h2>
-            <p>Join engineers who are transforming their skills with AI-powered education</p>
+            <h2>Start Building Today</h2>
+            <p>Join developers who are mastering AI while creating profitable tools</p>
           </div>
           <div className={styles.ctaBannerButtons}>
             <a 
@@ -99,7 +89,7 @@ function MainContent() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Watch Episodes
+              Watch Series
             </a>
             <a 
               href="#" 
@@ -107,7 +97,7 @@ function MainContent() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Access Tutorials
+              Try Tutorials
             </a>
           </div>
         </div>
@@ -119,15 +109,15 @@ function MainContent() {
             <img src="img/ai-animation.svg" alt="AI Animation" />
           </div>
           <div className={styles.sectionText}>
-            <h2>The Data Store</h2>
-            <p>Access our vast digital library of curated datasets and tools:</p>
+            <h2>The AI Toolkit</h2>
+            <p>Access our comprehensive suite of AI development resources:</p>
             <ul>
-              <li>Interactive data visualizations</li>
-              <li>Real-time data streams</li>
-              <li>AI-powered discovery tools</li>
+              <li>Windsurf AI coding companion for rapid development</li>
+              <li>Market-ready templates and frameworks</li>
+              <li>Revenue generation strategies and tools</li>
             </ul>
-            <Link className="button button--primary" to="/docs/data-store">
-              Explore The Data Store
+            <Link className="button button--primary" to="docs/data-store">
+              Access Tools
             </Link>
           </div>
         </div>
@@ -136,14 +126,14 @@ function MainContent() {
       <section className={styles.integrationSection}>
         <div className={styles.sectionContent}>
           <div className={styles.sectionText}>
-            <h2>Meet Our Expert Team</h2>
-            <p>Learn from industry experts who bring theory to life:</p>
+            <h2>Learn From The Best</h2>
+            <p>Our experts combine theory with practical revenue generation:</p>
             <ul>
-              <li>Maya "Vector" Rodriguez - AI Systems Architecture</li>
-              <li>Marcus "Catalyst" Chen - Machine Learning</li>
-              <li>Sage "Architect" Zhang - Systems Design</li>
+              <li>Maya "Vector" Rodriguez - AI Systems & Revenue Strategy</li>
+              <li>Marcus "Catalyst" Chen - ML Implementation & Market Fit</li>
+              <li>Sage "Architect" Zhang - Systems Design & Scaling</li>
             </ul>
-            <Link className="button button--primary" to="/docs/team">
+            <Link className="button button--primary" to="docs/team">
               Meet The Team
             </Link>
           </div>
@@ -154,8 +144,8 @@ function MainContent() {
       </section>
 
       <section className={styles.getStartedSection}>
-        <h2>Ready to Level Up Your Skills?</h2>
-        <p>Join thousands of engineers learning to solve real-world problems with AI-powered solutions.</p>
+        <h2>Ready to Master AI Development?</h2>
+        <p>Join our community of engineers building profitable AI solutions while learning through animation.</p>
         <div className={styles.extensionButtons}>
           <a 
             href="#" 
@@ -163,7 +153,7 @@ function MainContent() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Watch First Episode
+            Start Series
           </a>
           <a
             className={styles.vscodeButton} 
@@ -171,7 +161,7 @@ function MainContent() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Browse Tutorials
+            Try Windsurf
           </a>
         </div>
       </section>
@@ -183,16 +173,16 @@ function FloatingCTA() {
   return (
     <div className={styles.floatingCTA}>
       <div className={styles.floatingCTAContent}>
-        <span>Ready to transform your workflow?</span>
+        <span>Transform your development workflow with AI</span>
         <div className={styles.floatingCTAButtons}>
           <a
             className={styles.floatingVSCodeButton} 
-            href="https://github.com/tristinrybakVU/shippi-smartcomment-assistant"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
             <VSCodeIcon />
-            Install VSCode Extension
+            Try Windsurf Now
           </a>
         </div>
       </div>
@@ -203,14 +193,17 @@ function FloatingCTA() {
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={siteConfig.title}
-      description="Learn engineering through AI-powered interactive tutorials and animated lessons">
-      <HomepageHeader />
-      <main>
-        <MainContent />
-        <FloatingCTA />
-      </main>
-    </Layout>
+    <>
+      <DefaultSEO />
+      <Layout
+        title={siteConfig.title}
+        description="Build revenue-generating AI tools in 24 hours">
+        <HomepageHeader />
+        <main>
+          <MainContent />
+          <FloatingCTA />
+        </main>
+      </Layout>
+    </>
   );
 }
