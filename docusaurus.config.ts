@@ -97,18 +97,24 @@ const config: Config = {
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: 'Genius Force - AI Development Tools'},
       {name: 'twitter:description', content: 'Build revenue-generating AI tools in 24 hours'},
-      {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.png'},
+      {name: 'twitter:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.jpg'},
 
       // Open Graph (Facebook, iMessage, etc)
       {property: 'og:type', content: 'website'},
       {property: 'og:title', content: 'Genius Force - AI Development Tools'},
       {property: 'og:description', content: 'Build revenue-generating AI tools in 24 hours'},
-      {property: 'og:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.png'},
+      {property: 'og:image', content: 'https://geniusforceai.github.io/Coders/img/social-card.jpg'},
       {property: 'og:image:alt', content: 'Genius Force Preview'},
       {property: 'og:url', content: 'https://geniusforceai.github.io/Coders/'},
       {property: 'og:site_name', content: 'Genius Force'},
+
+      // iOS specific
+      {name: 'apple-mobile-web-app-title', content: 'Genius Force'},
+      {name: 'apple-mobile-web-app-capable', content: 'yes'},
+      {name: 'theme-color', content: '#00F5FF'},
+      {name: 'msapplication-TileColor', content: '#00F5FF'},
     ],
-    image: 'img/social-card.png',
+    image: 'img/social-card.jpg',
     navbar: {
       title: 'Genius Force',
       logo: {

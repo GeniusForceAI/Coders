@@ -11,7 +11,7 @@ interface DefaultSEOProps {
 export default function DefaultSEO({ 
   title = 'Genius Force - AI Development Tools',
   description = 'Build revenue-generating AI tools in 24 hours',
-  image = '/img/social-card.png'
+  image = '/img/social-card.jpg'
 }: DefaultSEOProps): JSX.Element {
   const siteUrl = 'https://geniusforceai.github.io/Coders';
   const previewImage = useBaseUrl(image);
@@ -38,6 +38,12 @@ export default function DefaultSEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImageUrl} />
+
+      {/* iOS specific */}
+      <meta name="apple-mobile-web-app-title" content="Genius Force" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="theme-color" content="#00F5FF" />
+      <meta name="msapplication-TileColor" content="#00F5FF" />
     </Head>
   );
 }
