@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Neural Network Nodes -->
+  <circle cx="200" cy="50" r="15" fill="#00c8c8" opacity="0.6"/>
+  <circle cx="120" cy="120" r="15" fill="#00c8c8" opacity="0.6"/>
+  <circle cx="280" cy="120" r="15" fill="#00c8c8" opacity="0.6"/>
+  <circle cx="200" cy="190" r="15" fill="#00c8c8" opacity="0.6"/>
+  
+  <!-- Neural Network Connections -->
+  <line x1="200" y1="50" x2="120" y2="120" stroke="#00c8c8" stroke-width="2">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="200" y1="50" x2="280" y2="120" stroke="#00c8c8" stroke-width="2">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+  </line>
+  <line x1="120" y1="120" x2="200" y2="190" stroke="#00c8c8" stroke-width="2">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="1s"/>
+  </line>
+  <line x1="280" y1="120" x2="200" y2="190" stroke="#00c8c8" stroke-width="2">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+  </line>
+  
+  <!-- Data Flow Particles -->
+  <circle cx="160" cy="85" r="4" fill="#00c8c8">
+    <animate attributeName="cx" values="200;120" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="50;120" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="240" cy="85" r="4" fill="#00c8c8">
+    <animate attributeName="cx" values="200;280" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="50;120" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="160" cy="155" r="4" fill="#00c8c8">
+    <animate attributeName="cx" values="120;200" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="120;190" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="240" cy="155" r="4" fill="#00c8c8">
+    <animate attributeName="cx" values="280;200" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="120;190" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

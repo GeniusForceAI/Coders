@@ -1,0 +1,82 @@
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgb(0, 236, 255) 0%, rgb(110, 110, 255) 50%, rgb(196, 110, 255) 100%);
+}
+
+.heroBanner h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.heroBanner p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #00c8c8;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #00c8c8;
+}
+
+.card {
+  background: #1b1b1d;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 200, 200, 0.1);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 200, 200, 0.3);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardContent h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #00c8c8;
+}
+
+.cardContent p {
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  flex-grow: 1;
+}
+
+.cardContent button {
+  width: 100%;
+  background: #00c8c8;
+  border: none;
+  color: black;
+  font-weight: 500;
+  margin-top: auto;
+}

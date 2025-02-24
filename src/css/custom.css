@@ -1,0 +1,795 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Light Mode (Default) - Based on GForce logo */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f5f6f7;
+  --ifm-border-color: #e0e0e0;
+  --ifm-font-color-base: #2a2a2a;
+  --ifm-font-color-secondary: #4a4a4a;
+
+  /* GForce Brand Colors - Darker Cyan */
+  --ifm-color-primary: #00c8c8;
+  --ifm-color-primary-dark: #00b3b3;
+  --ifm-color-primary-darker: #009999;
+  --ifm-color-primary-darkest: #008080;
+  --ifm-color-primary-light: #00e6e6;
+  --ifm-color-primary-lighter: #00ffff;
+  --ifm-color-primary-lightest: #33ffff;
+  
+  /* Accent Colors */
+  --ifm-color-secondary: #b0b0b0;
+  --ifm-color-success: #00b3b3;
+  --ifm-color-warning: #ffcc00;
+  --ifm-color-danger: #ff3366;
+
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
+  --ifm-heading-font-weight: 600;
+  --ifm-h1-font-size: 3.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.5rem;
+
+  /* GForce Gradients */
+  --gradient-primary: linear-gradient(145deg, #ffffff 0%, #00c8c8 100%);
+  --gradient-secondary: linear-gradient(145deg, #ffffff 0%, #e0e0e0 75%, #b0b0b0 100%);
+  --gradient-dark: linear-gradient(145deg, #2a2a2a 0%, #4a4a4a 100%);
+
+  /* Spacing */
+  --ifm-spacing-horizontal: 2rem;
+  --ifm-spacing-vertical: 2rem;
+
+  /* Border Radius */
+  --ifm-border-radius: 8px;
+  --ifm-border-radius-lg: 12px;
+  --ifm-border-radius-pill: 9999px;
+
+  /* Shadows */
+  --ifm-shadow-xs: 0 2px 4px rgba(0,0,0,0.1);
+  --ifm-shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --ifm-shadow-lg: 0 8px 16px rgba(0,0,0,0.1);
+
+  /* Code Blocks - Light Mode */
+  --ifm-code-background: #2a2a2a;
+  --ifm-code-color: #00c8c8;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 200, 200, 0.15);
+
+  /* Sidebar styles */
+  --ifm-menu-color: #2a2a2a;
+  --ifm-menu-color-active: var(--ifm-color-primary-darker);
+  --ifm-menu-color-background-active: rgba(0, 200, 200, 0.1);
+  
+  /* Link colors */
+  --ifm-link-color: #008080;
+  --ifm-link-hover-color: #00b3b3;
+  --ifm-link-decoration: none;
+}
+
+/* Dark mode overrides - GForce Dark */
+[data-theme='dark'] {
+  --ifm-background-color: #1a1a1a;
+  --ifm-background-surface-color: #2a2a2a;
+  --ifm-border-color: #404040;
+  --ifm-font-color-base: #ffffff;
+  --ifm-font-color-secondary: #e0e0e0;
+  --ifm-navbar-background-color: #1a1a1a;
+
+  /* Shadows for dark mode */
+  --ifm-shadow-xs: 0 2px 4px rgba(0,0,0,0.2);
+  --ifm-shadow-md: 0 4px 6px rgba(0,0,0,0.25);
+  --ifm-shadow-lg: 0 8px 16px rgba(0,0,0,0.3);
+
+  /* Code Blocks - Dark Mode */
+  --ifm-code-background: #2a2a2a;
+  --ifm-code-color: #00c8c8;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 200, 200, 0.15);
+
+  /* Link colors */
+  --ifm-link-color: #00c8c8;
+  --ifm-link-hover-color: #00e6e6;
+}
+
+/* Button Styling */
+.button--primary {
+  background: var(--gradient-primary);
+  border: none;
+  color: #2a2a2a;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-shadow-md);
+}
+
+.button--secondary {
+  background: var(--gradient-secondary);
+  border: none;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero--primary {
+  --ifm-hero-background-color: var(--ifm-background-color);
+  --ifm-hero-text-color: var(--ifm-font-color-base);
+  background: var(--gradient-primary);
+  position: relative;
+}
+
+[data-theme='dark'] .hero--primary {
+  background: var(--gradient-dark);
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* Card Styling */
+.card {
+  border: 1px solid var(--ifm-border-color);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-shadow-lg);
+}
+
+/* Feature Cards */
+.featureCard {
+  border: 1px solid var(--ifm-border-color);
+  border-radius: var(--ifm-border-radius-lg);
+  padding: 2rem;
+  background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(0,200,200,0.05) 100%);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .featureCard {
+  background: linear-gradient(145deg, rgba(42,42,42,0.5) 0%, rgba(0,200,200,0.1) 100%);
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-shadow-lg);
+}
+
+/* Component Styles */
+.hero {
+  background: var(--ifm-background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.hero--primary {
+  --ifm-hero-background-color: var(--ifm-background-color);
+  --ifm-hero-text-color: var(--ifm-font-color-base);
+  background: linear-gradient(145deg, #1A1A2E 0%, #2A2A4A 100%);
+  position: relative;
+  z-index: 1; /* Base z-index for hero */
+}
+
+.hero--primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0.1;
+  filter: blur(50px);
+  z-index: 1; /* Above hero background */
+}
+
+.hero__title,
+.hero__subtitle,
+.hero .container {
+  position: relative;
+  z-index: 2; /* Above overlay effects */
+}
+
+.hero__title {
+  color: var(--ifm-color-primary);
+  text-shadow: 0 0 10px rgba(0, 200, 200, 0.5);
+}
+
+.hero__subtitle {
+  color: white !important;
+  opacity: 0.9;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.button {
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  z-index: 2; /* Ensure button is clickable */
+}
+
+.button--primary {
+  background: var(--ifm-color-primary);
+  color: #1A1A2E;
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 200, 200, 0.5);
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 200, 200, 0.7);
+}
+
+.button--secondary {
+  background: transparent;
+  color: white !important; /* Force white text */
+  border: 2px solid var(--ifm-color-primary);
+  box-shadow: 0 0 10px rgba(0, 200, 200, 0.3);
+}
+
+.button--secondary:hover {
+  background: rgba(0, 200, 200, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 200, 200, 0.5);
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Ensure buttons container is above hero overlay */
+.buttons {
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-border-color);
+  box-shadow: 0 0 15px rgba(0, 200, 200, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 200, 200, 0.2);
+}
+
+/* Feature icons with glow effect */
+.featureIcon {
+  font-size: 3rem;
+  padding: 1rem;
+  color: var(--ifm-color-primary);
+  text-shadow: 0 0 10px rgba(0, 200, 200, 0.5);
+}
+
+/* Navbar customization - always dark */
+.navbar {
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.navbar__title,
+.navbar__link {
+  color: var(--ifm-color-primary) !important;
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-primary-light) !important;
+  text-shadow: 0 0 10px rgba(0, 200, 200, 0.5);
+}
+
+/* Button text color fix for dark mode */
+[data-theme='dark'] .button--primary {
+  color: white;
+}
+
+/* Footer customization */
+.footer {
+  background: linear-gradient(180deg, #1A1A2E 0%, #0D1117 100%);
+}
+
+/* Code blocks with cyberpunk style */
+.prism-code {
+  background-color: var(--ifm-code-background) !important;
+  color: var(--ifm-code-color) !important;
+  border: 1px solid rgba(0, 200, 200, 0.2);
+  box-shadow: 0 0 10px rgba(0, 200, 200, 0.1);
+}
+
+/* Dark mode toggle customization */
+.theme-edit-utils {
+  color: white !important;
+}
+
+.navbar__items--right .clean-btn {
+  color: white !important;
+}
+
+.navbar__items--right .clean-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode toggle icon */
+.navbar__items--right .clean-btn svg path {
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Optional: Add a subtle glow effect to the toggle */
+.navbar__items--right .clean-btn:hover svg {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+/* Make sidebar category labels more visible in light mode */
+.menu__list-item-collapsible {
+  font-weight: 600;
+  color: var(--ifm-menu-color);
+}
+
+/* Consistent code block styling */
+code {
+  background-color: var(--ifm-code-background) !important;
+  color: var(--ifm-code-color) !important;
+  border-radius: var(--ifm-code-border-radius);
+  padding: var(--ifm-code-padding-vertical) var(--ifm-code-padding-horizontal);
+}
+
+/* Style for inline code */
+:not(pre) > code {
+  background-color: var(--ifm-code-background) !important;
+  color: var(--ifm-code-color) !important;
+  padding: 0.2rem 0.4rem;
+}
+
+/* Code blocks within pre tags */
+pre {
+  background-color: var(--ifm-code-background) !important;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Shell/terminal code blocks */
+.language-bash,
+.language-shell,
+.language-terminal {
+  background-color: var(--ifm-code-background) !important;
+  color: var(--ifm-code-color) !important;
+}
+
+/* Ensure code inside pre tags inherits the correct color */
+pre code {
+  background-color: transparent !important;
+  color: var(--ifm-code-color) !important;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Active sidebar item styling */
+.menu__link--active {
+  font-weight: 600;
+  background-color: var(--ifm-menu-color-background-active);
+}
+
+/* Hover effects for sidebar items */
+.menu__link:hover {
+  background-color: rgba(0, 200, 200, 0.05);
+  color: var(--ifm-color-primary-darker);
+}
+
+/* Command line/shell prompt styling */
+.command-line-prompt {
+  border-right-color: rgba(0, 200, 200, 0.2);
+}
+
+/* Code block specific styling */
+.theme-code-block {
+  background-color: var(--ifm-code-background) !important;
+}
+
+div[class^='codeBlockContainer'] {
+  background-color: var(--ifm-code-background) !important;
+}
+
+/* Override Dracula theme background for consistency */
+[data-theme='dark'] .prism-code,
+[data-theme='dark'] pre[class*='language-'],
+[data-theme='dark'] code[class*='language-'] {
+  background: #1A1A2E !important; /* Match our dark theme background */
+}
+
+/* Also ensure the code block container maintains the same background */
+[data-theme='dark'] div[class^='codeBlockContainer'] {
+  background: #1A1A2E !important;
+}
+
+/* Optional: Add a subtle glow effect in dark mode */
+[data-theme='dark'] .prism-code {
+  box-shadow: 0 0 20px rgba(0, 200, 200, 0.1);
+  border: 1px solid rgba(0, 200, 200, 0.2);
+}
+
+/* Sidebar text color in dark mode */
+[data-theme='dark'] .menu__link {
+  color: white;
+}
+
+[data-theme='dark'] .menu__list-item-collapsible {
+  color: white;
+}
+
+/* Keep the active item using our primary color */
+[data-theme='dark'] .menu__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Keep hover color as is */
+[data-theme='dark'] .menu__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Category labels in dark mode */
+[data-theme='dark'] .menu__list-item-collapsible:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Add a subtle underline on hover in light mode */
+[data-theme='light'] a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--ifm-link-hover-color);
+}
+
+/* Keep the neon effect for dark mode links */
+[data-theme='dark'] a:hover {
+  text-shadow: 0 0 8px rgba(0, 200, 200, 0.5);
+}
+
+/* Animation styles */
+.workflow-animation {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.brain-container {
+  filter: drop-shadow(0 0 10px var(--ifm-color-primary));
+}
+
+.data-stream {
+  opacity: 0.7;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  padding: 2rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-border-radius-lg);
+  border: 1px solid var(--ifm-border-color);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 200, 200, 0.2);
+}
+
+.feature-icon {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
+.integration-diagram {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+/* Dark mode specific animations */
+[data-theme='dark'] .brain-container {
+  filter: drop-shadow(0 0 15px var(--ifm-color-primary));
+}
+
+[data-theme='dark'] .feature-card:hover {
+  box-shadow: 0 5px 30px rgba(0, 200, 200, 0.3);
+}
+
+/* Neural Network Animation Styles */
+.neural-network .node {
+  fill: var(--ifm-background-surface-color);
+  stroke: var(--ifm-color-primary-darker); /* Darker in light mode */
+  stroke-width: 2;
+}
+
+[data-theme='dark'] .neural-network .node {
+  stroke: var(--ifm-color-primary); /* Brighter in dark mode */
+  filter: drop-shadow(0 0 8px var(--ifm-color-primary));
+}
+
+.neural-network .connection {
+  stroke: var(--ifm-color-primary-darker); /* Darker in light mode */
+  stroke-width: 1.5;
+  opacity: 0.4;
+  fill: none;
+  stroke-dasharray: 4;
+  animation: flowConnection 2s linear infinite;
+}
+
+[data-theme='dark'] .neural-network .connection {
+  stroke: var(--ifm-color-primary); /* Brighter in dark mode */
+  opacity: 0.7;
+}
+
+.neural-network .pulse {
+  fill: var(--ifm-color-primary-darker); /* Darker in light mode */
+  filter: drop-shadow(0 0 4px var(--ifm-color-primary-darker));
+  opacity: 0.8;
+}
+
+[data-theme='dark'] .neural-network .pulse {
+  fill: var(--ifm-color-primary); /* Brighter in dark mode */
+  filter: drop-shadow(0 0 12px var(--ifm-color-primary));
+}
+
+@keyframes flowConnection {
+  from {
+    stroke-dashoffset: 8;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Node activation animation - Light mode */
+.neural-network .node {
+  animation: pulseNodeLight 2s ease-in-out infinite;
+}
+
+[data-theme='dark'] .neural-network .node {
+  animation: pulseNodeDark 2s ease-in-out infinite;
+}
+
+@keyframes pulseNodeLight {
+  0% {
+    filter: drop-shadow(0 0 2px var(--ifm-color-primary-darker));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px var(--ifm-color-primary-darker));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px var(--ifm-color-primary-darker));
+  }
+}
+
+@keyframes pulseNodeDark {
+  0% {
+    filter: drop-shadow(0 0 5px var(--ifm-color-primary));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px var(--ifm-color-primary));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px var(--ifm-color-primary));
+  }
+}
+
+/* Stagger node animations */
+.neural-network .input-layer .node:nth-child(1) { animation-delay: 0s; }
+.neural-network .input-layer .node:nth-child(2) { animation-delay: 0.2s; }
+.neural-network .input-layer .node:nth-child(3) { animation-delay: 0.4s; }
+.neural-network .hidden-layer-1 .node:nth-child(1) { animation-delay: 0.6s; }
+.neural-network .hidden-layer-1 .node:nth-child(2) { animation-delay: 0.8s; }
+.neural-network .hidden-layer-2 .node { animation-delay: 1s; }
+.neural-network .output-layer .node { animation-delay: 1.2s; }
+
+/* Pulse animations */
+.neural-network .pulse-1 {
+  animation-delay: 0s;
+}
+
+.neural-network .pulse-2 {
+  animation-delay: 1s;
+}
+
+/* Mobile navbar fixes */
+@media screen and (max-width: 996px) {
+  /* Ensure the mobile menu is visible when opened */
+  .navbar-sidebar {
+    background-color: var(--ifm-navbar-background-color);
+    height: 100vh;
+    transform: translate3d(0, 0, 0);
+    z-index: 100000;
+  }
+
+  /* Style the menu items in mobile view */
+  .navbar-sidebar__items {
+    padding: 0.5rem;
+  }
+
+  .navbar-sidebar__item {
+    padding: 0.5rem;
+  }
+
+  /* Ensure links are visible in mobile menu */
+  .navbar-sidebar__items .navbar__link {
+    color: var(--ifm-color-primary) !important;
+    display: block;
+    padding: 0.75rem;
+  }
+
+  /* Style active and hover states */
+  .navbar-sidebar__items .navbar__link:hover,
+  .navbar-sidebar__items .navbar__link--active {
+    background: rgba(0, 200, 200, 0.1);
+    border-radius: 4px;
+  }
+
+  /* Ensure the backdrop is visible */
+  .navbar-sidebar__backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+  }
+}
+
+/* Ensure dropdown menus are visible */
+.dropdown__menu {
+  background: var(--ifm-navbar-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: var(--ifm-dropdown-shadow);
+}
+
+/* Responsive SVG styles */
+.workflow-animation {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.neural-network-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Adjust feature grid for mobile */
+@media screen and (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-icon {
+    max-width: 80px;
+  }
+}
+
+/* Ensure SVGs scale properly on different screen sizes */
+@media screen and (max-width: 480px) {
+  .workflow-animation {
+    margin: 1rem auto;
+  }
+  
+  .neural-network .node {
+    r: 8; /* Slightly smaller nodes on mobile */
+  }
+  
+  .neural-network .connection {
+    stroke-width: 1; /* Thinner connections on mobile */
+  }
+}
+
+/* Privacy Policy page styles */
+.privacy-policy {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.privacy-policy h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+}
+
+.privacy-policy h2 {
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.privacy-policy h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  color: var(--ifm-color-primary-darker);
+}
+
+.privacy-policy p,
+.privacy-policy li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+}
+
+.privacy-policy ul {
+  padding-left: 1.5rem;
+}
+
+.privacy-policy li {
+  margin-bottom: 0.5rem;
+}
+
+/* Podcast Page Styles */
+.podcast-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem 0;
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.podcast-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+  color: var(--ifm-color-primary);
+}
+
+.podcast-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 2rem;
+}
+
+.player-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.audio-player {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+}
+
+/* Content styles are handled by Docusaurus markdown styling */

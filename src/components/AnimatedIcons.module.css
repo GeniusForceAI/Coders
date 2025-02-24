@@ -1,0 +1,31 @@
+.featureIcon {
+  width: 64px;
+  height: 64px;
+  color: var(--ifm-color-primary);
+}
+
+.resourceIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--ifm-color-primary);
+}
+
+.pulse {
+  transform-origin: center;
+}
+
+.brain {
+  transform-origin: center;
+}
+
+.chart {
+  transform-origin: center;
+}
+
+.code {
+  transform-origin: center;
+}
+
+.book {
+  transform-origin: center;
+} 

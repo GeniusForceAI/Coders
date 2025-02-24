@@ -1,0 +1,120 @@
+.podcastsContainer {
+  padding: 2rem var(--ifm-spacing-horizontal);
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+}
+
+.podcastsHero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.podcastsHero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.podcastsHero p {
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.podcastsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.podcastCard {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.podcastCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.podcastIcon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  transition: color 0.2s ease;
+}
+
+.podcastCard:hover .podcastIcon {
+  color: var(--ifm-color-primary);
+}
+
+.podcastContent {
+  flex: 1;
+}
+
+.podcastContent h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-heading-color);
+}
+
+.podcastContent p {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.podcastMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1rem;
+}
+
+.listenButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-background-color);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.listenButton:hover {
+  background: var(--ifm-color-primary-darker);
+  text-decoration: none;
+  color: var(--ifm-background-color);
+}
+
+@media screen and (max-width: 996px) {
+  .podcastsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .podcastsHero h1 {
+    font-size: 2.5rem;
+  }
+
+  .podcastImage {
+    height: 180px;
+  }
+}
+
+/* Remove the image-related styles since we're using SVGs now */
+.podcastImage,
+.podcastImage img {
+  display: none;
+} 

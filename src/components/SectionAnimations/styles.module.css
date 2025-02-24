@@ -1,0 +1,105 @@
+.sectionAnimation {
+  width: 100%;
+  height: auto;
+}
+
+/* Workflow Animation Styles */
+.board {
+  fill: #1e1e1e;
+  stroke: #00f2fe;
+  stroke-width: 2;
+}
+
+.card {
+  fill: #2d2d2d;
+  stroke: #00f2fe;
+  stroke-width: 1;
+}
+
+.arrow {
+  stroke: #00f2fe;
+  stroke-width: 2;
+  stroke-dasharray: 5;
+  fill: none;
+  animation: dash 30s linear infinite;
+}
+
+.ide {
+  fill: #1e1e1e;
+  stroke: #00f2fe;
+  stroke-width: 2;
+}
+
+.codeLines rect {
+  fill: #00f2fe;
+  opacity: 0.8;
+}
+
+/* Issue Tracking Animation Styles */
+.form {
+  fill: #1e1e1e;
+  stroke: #00f2fe;
+  stroke-width: 2;
+}
+
+.aiCircle {
+  fill: none;
+  stroke: #00f2fe;
+  stroke-width: 2;
+}
+
+.aiCross {
+  stroke: #00f2fe;
+  stroke-width: 2;
+  animation: rotate 10s linear infinite;
+}
+
+.suggestion {
+  fill: #2d2d2d;
+  stroke: #00f2fe;
+  stroke-width: 1;
+}
+
+/* Code Integration Animation Styles */
+.vscode {
+  fill: #1e1e1e;
+  stroke: #00f2fe;
+  stroke-width: 2;
+}
+
+.codeLine {
+  fill: #00f2fe;
+  opacity: 0.8;
+}
+
+.connectionPath {
+  stroke: #00f2fe;
+  stroke-width: 2;
+  stroke-dasharray: 5;
+  fill: none;
+  animation: dash 30s linear infinite;
+}
+
+.commit {
+  fill: #00f2fe;
+}
+
+.branch {
+  stroke: #00f2fe;
+  stroke-width: 2;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
