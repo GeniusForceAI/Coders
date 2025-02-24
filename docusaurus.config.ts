@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Genius Force',
-  tagline: 'AI-Powered Development Tools',
+  tagline: 'Build revenue-generating AI tools in 24 hours',
   favicon: 'img/genius_force_atom_black_circle.svg',
 
   // Set the production url of your site here
@@ -18,6 +18,7 @@ const config: Config = {
   // GitHub pages deployment config.
   organizationName: 'GeniusForceAI',
   projectName: 'Coders',
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: process.env.NODE_ENV === 'production' ? 'warn' : 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -43,11 +44,16 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          editUrl: 'https://github.com/GeniusForceAI/Coders/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
         },
-      },
+      } satisfies Preset.Options,
     ],
   ],
 
