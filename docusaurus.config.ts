@@ -38,7 +38,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          routeBasePath: 'docs',
+          routeBasePath: '/',
           // Please change this to your repo.
           editUrl: 'https://github.com/GeniusForceAI/Coders/tree/main/',
         },
@@ -62,10 +62,7 @@ const config: Config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
-          {
-            from: '/docs',
-            to: '/docs/intro',
-          },
+          // Remove all redirects for now
         ],
         createRedirects(existingPath) {
           if (existingPath.includes('/docs/')) {
@@ -129,7 +126,7 @@ const config: Config = {
       style: 'dark',
       items: [
         {
-          to: 'docs/intro',
+          to: '/fundamentals/machine-learning-basics',
           label: 'Tutorials',
           position: 'left',
         },
@@ -163,7 +160,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorials',
-              to: 'docs/intro',
+              to: '/fundamentals/machine-learning-basics',
             },
             {
               label: 'Courses',
