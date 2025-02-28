@@ -126,19 +126,19 @@ function MainContent() {
       <section className={styles.integrationSection}>
         <div className={styles.sectionContent}>
           <div className={styles.sectionText}>
-            <h2>Learn From The Best</h2>
-            <p>Our experts combine theory with practical revenue generation:</p>
+            <h2>Visual Learning Made Simple</h2>
+            <p>Our animated series visualizes complex concepts for easier understanding:</p>
             <ul>
-              <li>Maya "Vector" Rodriguez - AI Systems & Revenue Strategy</li>
-              <li>Marcus "Catalyst" Chen - ML Implementation & Market Fit</li>
-              <li>Sage "Architect" Zhang - Systems Design & Scaling</li>
+              <li>AI Systems Architecture - Simplified visual breakdowns of complex AI systems</li>
+              <li>Machine Learning Fundamentals - Animated explanations of ML algorithms and processes</li>
+              <li>Systems Design & Scaling - Visual guides to building scalable applications</li>
             </ul>
-            <Link className="button button--primary" to="docs/team">
-              Meet The Team
+            <Link className="button button--primary" to="docs/series">
+              Watch Series
             </Link>
           </div>
           <div className={styles.sectionAnimation}>
-            <img src="img/integration-animation.svg" alt="Integration Animation" />
+            <img src="img/integration-animation.svg" alt="Animation Series Visualization" />
           </div>
         </div>
       </section>
