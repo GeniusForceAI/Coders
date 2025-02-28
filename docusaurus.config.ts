@@ -126,7 +126,7 @@ const config: Config = {
       style: 'dark',
       items: [
         {
-          to: '/fundamentals/machine-learning-basics',
+          to: '/fundamentals',
           label: 'Tutorials',
           position: 'left',
         },
@@ -160,7 +160,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorials',
-              to: '/fundamentals/machine-learning-basics',
+              to: '/fundamentals',
             },
             {
               label: 'Courses',

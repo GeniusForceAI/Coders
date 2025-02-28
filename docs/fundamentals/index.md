@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /
+slug: /fundamentals
 ---
 
 # Fundamentals of AI and Machine Learning
